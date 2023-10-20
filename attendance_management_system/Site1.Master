@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="attendance_management_system.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%--bootstrap css--%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <%--dtatatable css--%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+    <%--fontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+
+    <%--our custom css--%>
+    <link href="css/customstylesheet.css" rel="stylesheet" />
+    <%--jquery--%>
+
+
+    <script src="bootstrap/js/jquery-3.7.1.slim.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <%--propper js--% >
+    <script src="bootstrap/js/popper.min.js"></script>  
+    <%--bootstrap js--%>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type = "text/javascript" >
+        function preventBack(){window.history.forward();}
+        setTimeout("preventBack()", 0);
+        window.onunload=function(){null};
+    </script>
+    <style>
+        
+
+        .navbar {
+            background-color: #007bff; /* Navbar background color */
+        }
+
+        .navbar-brand {
+            color: white; /* Navbar brand text color */
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: white; /* Navbar links text color */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #cce5ff; /* Navbar links text color on hover */
+        }
+
+        .navbar-toggler-icon {
+            background-color: white; /* Navbar toggler icon color */
+        }
+
+        .navbar-collapse {
+            justify-content: flex-end; /* Align menu items to the right */
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="images/DDU_logo.png" width="30" height="30" class="d-inline-block align-top" alt="" />
+                    E-Attendance
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="HomePage.aspx">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="ViewAttendance.aspx">View Attendance</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="Update_Student.aspx">Update Profile</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="Logout.aspx">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Placeholder -->
+        <div class="content-container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <!-- Bootstrap JS and dependencies -->
+<%--        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>--%>
+    </form>
+</body>
+</html>
